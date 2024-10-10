@@ -155,7 +155,7 @@ Further details on `conventional commits` can be found [here](https://www.conven
   <tbody>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/JosephThuku"><img src="https://avatars.githubusercontent.com/u/40717516?v=4?s=50" width="50px;" alt="Prosperity"/><br /><sub><b>JoeThuku</b></sub></a><br /><a href="https://github.com/element-pay/BaseFlow" title="code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Mtsumi"><img src="https://avatars.githubusercontent.com/u/6025509?v=4" width="50px;" alt="chibie"/><br /><sub><b>chibie</b></sub></a><br /><a href="https://github.com/element-pay/BaseFlow" title="code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Mtsumi"><img src="https://avatars.githubusercontent.com/u/6025509?v=4" width="50px;" alt="chibie"/><br /><sub><b>AlyMtsumi</b></sub></a><br /><a href="https://github.com/element-pay/BaseFlow" title="code">💻</a></td>
     </tr>
   </tbody>
   <tfoot>
