@@ -4,7 +4,7 @@
     
 ## Description
 
-Base Flow is  a multi-chain EVM-based smart contracts that facilitate the on-chain lifecycle of a decentralized payment order. They empower a sender to create a payment order, enable a liquidity provider to receive cryptocurrency in escrow, and visevasa. the goal of the contract is to enable easy and fast crypto to fiat(e.g mpesa) payment and vise vasa in Africa
+Base Flow is  a multi-chain EVM-based smart contracts that facilitate the on-chain lifecycle of a decentralized payment order. This empower a sender to create a payment order, enable a liquidity provider to receive cryptocurrency in escrow, and visevasa. the goal of the contract is to enable easy and fast crypto to fiat(e.g mpesa) payment and vise vasa in Africa
 ## Deployment
 
 Deployment is done using Hardhat scripts
