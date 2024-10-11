@@ -1,5 +1,6 @@
 const { ethers } = require("hardhat");
 const { BigNumber } = require("@ethersproject/bignumber");
+const { expect } = require("chai");
 
 const ZERO_AMOUNT = BigNumber.from("0");
 const ZERO_ADDRESS = ethers.constants.AddressZero;
@@ -28,11 +29,13 @@ const Errors = {
 const Events = {
 	Gateway: {
 		OrderCreated: "OrderCreated",
-		OrderSettled: "OrderSettled",
+		OrderSettledOut: "OrderSettledOut",
 		OrderRefunded: "OrderRefunded",
 		SettingManagerBool: "SettingManagerBool",
 		ProtocolFeeUpdated: "ProtocolFeeUpdated",
 		ProtocolAddressUpdated: "ProtocolAddressUpdated",
+		Deposit: "Deposit",
+		OrderSettledIn: "OrderSettledIn",
 	},
 };
 
@@ -47,10 +50,10 @@ async function deployContract(name, args = [], value = 0) {
 }
 
 async function getSupportedInstitutions() {
-	const currency = ethers.utils.formatBytes32String("NGN");
+	const currency = ethers.utils.formatBytes32String("KES");
 
 	const accessBank = {
-		code: ethers.utils.formatBytes32String("ABNGNGLA"),
+		code: ethers.utils.formatBytes32String("NCBA"),
 		name: ethers.utils.formatBytes32String("ACCESS BANK"),
 	};
 
@@ -66,9 +69,18 @@ async function getSupportedInstitutions() {
 	};
 }
 
-async function mockMintDeposit(gateway, account, usdc, amount) {
-	await usdc.connect(account).mint(amount);
-	await usdc.connect(account).approve(gateway.address, amount);
+async function mockMintDeposit(gateway, account, token, amount) {
+	await token.connect(account).mint(amount);
+	await token.connect(account).approve(gateway.address, amount);
+}
+
+async function assertBalance(mockUSDT, mockDAI, account, depositAmount) {
+	expect(await mockDAI.balanceOf(account)).to.eq(depositAmount);
+	expect(await mockUSDT.balanceOf(account)).to.eq(depositAmount);
+}
+
+async function assertDepositBalance(gateway, token, account, amount) {
+	expect(await gateway.getBalance(token, account)).to.eq(amount);
 }
 
 module.exports = {
@@ -80,5 +92,7 @@ module.exports = {
 	Events,
 	deployContract,
 	mockMintDeposit,
+	assertBalance,
+	assertDepositBalance,
 	getSupportedInstitutions,
 };
