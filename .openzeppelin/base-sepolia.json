@@ -6,13 +6,13 @@
   },
   "proxies": [
     {
-      "address": "0x663C5BfE7d44bA946C2dd4b2D1Cf9580319F9338",
-      "txHash": "0x3d00851dc2109dd808720ed8d2142f86256bd01bcfbd7e023cbea97be33f1162",
+      "address": "0x6DfF935064c4CeAaFEf9dF22119422bD3eF5f644",
+      "txHash": "0xdec97ae82495875ce609c0364f994cbe45cdd04fc72aa8f87cccfd5b4c6514b1",
       "kind": "transparent"
     },
     {
-      "address": "0x847dfdAa218F9137229CF8424378871A1DA8f625",
-      "txHash": "0xbe0f5dfc2f2031ff60dd4e7a60a9cbfcc56234bda3a6d3be0e13d4ebe07ca62b",
+      "address": "0xC49cC46BFA3F73FC39140717Ad4C0Ef24b5d391E",
+      "txHash": "0x2cf5ee7cadede3ad643041af5af6528aa6babe9541ff62623a55c773bd879ba0",
       "kind": "transparent"
     }
   ],
@@ -1064,6 +1064,684 @@
           },
           "t_struct(Order)1822_storage": {
             "label": "struct IGateway.Order",
+            "members": [
+              {
+                "label": "sender",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "token",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "senderFeeRecipient",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "senderFee",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "protocolFee",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "isFulfilled",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "5"
+              },
+              {
+                "label": "isRefunded",
+                "type": "t_bool",
+                "offset": 1,
+                "slot": "5"
+              },
+              {
+                "label": "refundAddress",
+                "type": "t_address",
+                "offset": 2,
+                "slot": "5"
+              },
+              {
+                "label": "currentBPS",
+                "type": "t_uint96",
+                "offset": 0,
+                "slot": "6"
+              },
+              {
+                "label": "amount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "7"
+              }
+            ],
+            "numberOfBytes": "256"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          },
+          "t_uint96": {
+            "label": "uint96",
+            "numberOfBytes": "12"
+          }
+        },
+        "namespaces": {}
+      }
+    },
+    "ba9ff21987d9f178c2b63347449612cdc0d7c765695fb835ea33af80ce7ad4e6": {
+      "address": "0x343D896989eb81034f8347A19F5C2D922453c4aF",
+      "txHash": "0x17631030de9a05a9f380304d006e86eadef0d181ba5886cc1bed25a4a2472f40",
+      "layout": {
+        "solcVersion": "0.8.18",
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:63",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:68"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:40"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:22"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:94"
+          },
+          {
+            "label": "_pendingOwner",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_address",
+            "contract": "Ownable2StepUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/access/Ownable2StepUpgradeable.sol:21"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "Ownable2StepUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/access/Ownable2StepUpgradeable.sol:70"
+          },
+          {
+            "label": "MAX_BPS",
+            "offset": 0,
+            "slot": "151",
+            "type": "t_uint256",
+            "contract": "GatewaySettingManager",
+            "src": "contracts/GatewaySettingManager.sol:12"
+          },
+          {
+            "label": "protocolFeePercent",
+            "offset": 0,
+            "slot": "152",
+            "type": "t_uint64",
+            "contract": "GatewaySettingManager",
+            "src": "contracts/GatewaySettingManager.sol:13"
+          },
+          {
+            "label": "treasuryAddress",
+            "offset": 8,
+            "slot": "152",
+            "type": "t_address",
+            "contract": "GatewaySettingManager",
+            "src": "contracts/GatewaySettingManager.sol:14"
+          },
+          {
+            "label": "_aggregatorAddress",
+            "offset": 0,
+            "slot": "153",
+            "type": "t_address",
+            "contract": "GatewaySettingManager",
+            "src": "contracts/GatewaySettingManager.sol:15"
+          },
+          {
+            "label": "_isTokenSupported",
+            "offset": 0,
+            "slot": "154",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "GatewaySettingManager",
+            "src": "contracts/GatewaySettingManager.sol:16"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "155",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "GatewaySettingManager",
+            "src": "contracts/GatewaySettingManager.sol:19"
+          },
+          {
+            "label": "_paused",
+            "offset": 0,
+            "slot": "205",
+            "type": "t_bool",
+            "contract": "PausableUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol:29"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "206",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "PausableUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol:116"
+          },
+          {
+            "label": "orderOut",
+            "offset": 0,
+            "slot": "255",
+            "type": "t_mapping(t_bytes32,t_struct(OrderOut)4366_storage)",
+            "contract": "Gateway",
+            "src": "contracts/Gateway.sol:21"
+          },
+          {
+            "label": "orderIn",
+            "offset": 0,
+            "slot": "256",
+            "type": "t_mapping(t_bytes32,t_struct(OrderIn)4377_storage)",
+            "contract": "Gateway",
+            "src": "contracts/Gateway.sol:22"
+          },
+          {
+            "label": "_nonce",
+            "offset": 0,
+            "slot": "257",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "Gateway",
+            "src": "contracts/Gateway.sol:23"
+          },
+          {
+            "label": "balance",
+            "offset": 0,
+            "slot": "258",
+            "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+            "contract": "Gateway",
+            "src": "contracts/Gateway.sol:24"
+          },
+          {
+            "label": "processedOrders",
+            "offset": 0,
+            "slot": "259",
+            "type": "t_mapping(t_bytes32,t_bool)",
+            "contract": "Gateway",
+            "src": "contracts/Gateway.sol:25"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "260",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "Gateway",
+            "src": "contracts/Gateway.sol:26"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+            "label": "mapping(address => mapping(address => uint256))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_bytes32,t_bool)": {
+            "label": "mapping(bytes32 => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_bytes32,t_struct(OrderIn)4377_storage)": {
+            "label": "mapping(bytes32 => struct IGateway.OrderIn)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_bytes32,t_struct(OrderOut)4366_storage)": {
+            "label": "mapping(bytes32 => struct IGateway.OrderOut)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(OrderIn)4377_storage": {
+            "label": "struct IGateway.OrderIn",
+            "members": [
+              {
+                "label": "amount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "provider",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "sender",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "token",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "orderId",
+                "type": "t_bytes32",
+                "offset": 0,
+                "slot": "4"
+              }
+            ],
+            "numberOfBytes": "160"
+          },
+          "t_struct(OrderOut)4366_storage": {
+            "label": "struct IGateway.OrderOut",
+            "members": [
+              {
+                "label": "sender",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "token",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "senderFeeRecipient",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "senderFee",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "protocolFee",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "isFulfilled",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "5"
+              },
+              {
+                "label": "isRefunded",
+                "type": "t_bool",
+                "offset": 1,
+                "slot": "5"
+              },
+              {
+                "label": "refundAddress",
+                "type": "t_address",
+                "offset": 2,
+                "slot": "5"
+              },
+              {
+                "label": "currentBPS",
+                "type": "t_uint96",
+                "offset": 0,
+                "slot": "6"
+              },
+              {
+                "label": "amount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "7"
+              }
+            ],
+            "numberOfBytes": "256"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          },
+          "t_uint96": {
+            "label": "uint96",
+            "numberOfBytes": "12"
+          }
+        },
+        "namespaces": {}
+      }
+    },
+    "9d92527334fadde17fadea726a27afa70cf6c1a6611af90cde7883de367b802e": {
+      "address": "0x8352111a781eBf998a11427bdEEE8FFDBe933d7d",
+      "txHash": "0x2a9eaca5809b35bcd4c6b0d092dd84b163e34469f8b6566ea99092f592e102f0",
+      "layout": {
+        "solcVersion": "0.8.18",
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:63",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:68"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:40"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:22"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:94"
+          },
+          {
+            "label": "_pendingOwner",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_address",
+            "contract": "Ownable2StepUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/access/Ownable2StepUpgradeable.sol:21"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "Ownable2StepUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/access/Ownable2StepUpgradeable.sol:70"
+          },
+          {
+            "label": "MAX_BPS",
+            "offset": 0,
+            "slot": "151",
+            "type": "t_uint256",
+            "contract": "GatewaySettingManager",
+            "src": "contracts/GatewaySettingManager.sol:12"
+          },
+          {
+            "label": "protocolFeePercent",
+            "offset": 0,
+            "slot": "152",
+            "type": "t_uint64",
+            "contract": "GatewaySettingManager",
+            "src": "contracts/GatewaySettingManager.sol:13"
+          },
+          {
+            "label": "treasuryAddress",
+            "offset": 8,
+            "slot": "152",
+            "type": "t_address",
+            "contract": "GatewaySettingManager",
+            "src": "contracts/GatewaySettingManager.sol:14"
+          },
+          {
+            "label": "_aggregatorAddress",
+            "offset": 0,
+            "slot": "153",
+            "type": "t_address",
+            "contract": "GatewaySettingManager",
+            "src": "contracts/GatewaySettingManager.sol:15"
+          },
+          {
+            "label": "_isTokenSupported",
+            "offset": 0,
+            "slot": "154",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "GatewaySettingManager",
+            "src": "contracts/GatewaySettingManager.sol:16"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "155",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "GatewaySettingManager",
+            "src": "contracts/GatewaySettingManager.sol:19"
+          },
+          {
+            "label": "_paused",
+            "offset": 0,
+            "slot": "205",
+            "type": "t_bool",
+            "contract": "PausableUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol:29"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "206",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "PausableUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol:116"
+          },
+          {
+            "label": "orderOut",
+            "offset": 0,
+            "slot": "255",
+            "type": "t_mapping(t_bytes32,t_struct(OrderOut)3711_storage)",
+            "contract": "Gateway",
+            "src": "contracts/Gateway.sol:21"
+          },
+          {
+            "label": "orderIn",
+            "offset": 0,
+            "slot": "256",
+            "type": "t_mapping(t_bytes32,t_struct(OrderIn)3722_storage)",
+            "contract": "Gateway",
+            "src": "contracts/Gateway.sol:22"
+          },
+          {
+            "label": "_nonce",
+            "offset": 0,
+            "slot": "257",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "Gateway",
+            "src": "contracts/Gateway.sol:23"
+          },
+          {
+            "label": "balance",
+            "offset": 0,
+            "slot": "258",
+            "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+            "contract": "Gateway",
+            "src": "contracts/Gateway.sol:24"
+          },
+          {
+            "label": "processedOrders",
+            "offset": 0,
+            "slot": "259",
+            "type": "t_mapping(t_bytes32,t_bool)",
+            "contract": "Gateway",
+            "src": "contracts/Gateway.sol:25"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "260",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "Gateway",
+            "src": "contracts/Gateway.sol:26"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+            "label": "mapping(address => mapping(address => uint256))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_bytes32,t_bool)": {
+            "label": "mapping(bytes32 => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_bytes32,t_struct(OrderIn)3722_storage)": {
+            "label": "mapping(bytes32 => struct IGateway.OrderIn)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_bytes32,t_struct(OrderOut)3711_storage)": {
+            "label": "mapping(bytes32 => struct IGateway.OrderOut)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(OrderIn)3722_storage": {
+            "label": "struct IGateway.OrderIn",
+            "members": [
+              {
+                "label": "amount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "provider",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "sender",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "token",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "orderId",
+                "type": "t_bytes32",
+                "offset": 0,
+                "slot": "4"
+              }
+            ],
+            "numberOfBytes": "160"
+          },
+          "t_struct(OrderOut)3711_storage": {
+            "label": "struct IGateway.OrderOut",
             "members": [
               {
                 "label": "sender",
